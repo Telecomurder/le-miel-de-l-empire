@@ -1,6 +1,6 @@
 SRC = $(wildcard fiches/*.tex)
 
-all: $(SRC:%.tex:%.pdf)
+all: $(SRC:%.tex=%.pdf)
 
 %.pdf: %.tex
 	latexmk -pdf $^
