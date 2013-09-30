@@ -1,0 +1,23 @@
+\usepackage{ifthen}
+
+% Une commande pour réaliser un test ternaire sur le sexe du personnage.
+% La commande prend quatre argument :
+% * le premier est la variable de sexe à tester
+% * le deuxième est le résultat de la commande si le personnage est masculin
+% * le troisième est le résultat de la commande si le personnage est féminin 
+% * le quatrième est le résultat de la commande si le personnage est neutre
+%
+% Exemple :
+% \newcommand{\e}{\whichgender{\charactergender}{}{e}{(e)}}
+% La commande \e ne fera rien si le personnage est masculin, ajoutera un "e"
+% si le personnag est féminin, et ajoutera un "(e)" si le personnage est neutre
+\newcommand{\whichgender}[4]{
+    \ifthenelse{\equal{#1}{MALE}
+        {#2}
+        {
+            \ifthenelse{\equal{#1}{FEMALE}}
+            {#3}{#4}
+        }
+    }
+}
+
