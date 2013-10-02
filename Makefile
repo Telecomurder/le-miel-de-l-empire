@@ -22,3 +22,4 @@ mrproper:
 	$(SRC_GM_RESSOURCES)
 
 .PHONY: all clean mrproper
+
