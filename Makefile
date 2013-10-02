@@ -3,12 +3,12 @@ SRC = $(wildcard fiches/*.tex)
 all: $(SRC:%.tex=%.pdf)
 
 %.pdf: %.tex
-	latexmk -pdf $^
+	latexmk -pdf $<
 
 clean:
-	rm -f *.aux *.log *.fdb_latexmk *.fls
+	latexmk -c $(SRC)
 
-mrproper: clean
-	rm -f *.pdf
+mrproper:
+	latexmk -C $(SRC)
 
-.PHONY: clean mrproper
+.PHONY: all clean mrproper
