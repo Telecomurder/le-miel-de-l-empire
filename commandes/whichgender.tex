@@ -12,10 +12,10 @@
 % La commande \e ne fera rien si le personnage est masculin, ajoutera un "e"
 % si le personnag est féminin, et ajoutera un "(e)" si le personnage est neutre
 \newcommand{\whichgender}[4]{
-    \ifthenelse{\equal{#1}{MALE}
+    \ifthenelse{\equal{#1}{HOMME}
         {#2}
         {
-            \ifthenelse{\equal{#1}{FEMALE}}
+            \ifthenelse{\equal{#1}{FEMME}}
             {#3}{#4}
         }
     }

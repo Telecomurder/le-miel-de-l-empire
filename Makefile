@@ -6,6 +6,9 @@ all: $(SRC:%.tex=%.pdf)
 	latexmk -pdf $^
 
 clean:
-	rm -f *.aux *.log *.pdf *.fdb_latexmk *.fls
+	rm -f *.aux *.log *.fdb_latexmk *.fls
 
-.PHONY: clean
+mrproper: clean
+	rm -f *.pdf
+
+.PHONY: clean mrproper
