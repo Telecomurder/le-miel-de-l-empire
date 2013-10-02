@@ -2,23 +2,23 @@ SRC_CHARACTER_SHEETS=$(wildcard fiches/*.tex)
 SRC_GM_RESSOURCES=$(wildcard ressources/mj/*.tex)
 SRC_PLAYER_RESSOURCES=$(wildcard ressources/joueurs/*.tex)
 
-OUTPUTDIR=miel-de-l-empire-documents
-
 all: sheets gm_ressources player_ressources
 
 sheets: $(SRC_CHARACTER_SHEETS:%.tex=%.pdf)
 
-gm_ressources: $(SRC_GM_RESSORUCES:%.tex=%.pdf)
+gm_ressources: $(SRC_GM_RESSOURCES:%.tex=%.pdf)
 
 player_ressources: $(SRC_PLAYER_RESSOURCES:%.tex=%.pdf)
 
 %.pdf: %.tex
-	latexmk -outdir=$(OUTPUTDIR) -pdf $^
+	latexmk -pdf $^
 
 clean:
-	rm -f $(OUTPUTDIR)/*.{aux,log,fdb_latexmk,fls}
+	latexmk -c $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES)\
+	$(SRC_GM_RESSOURCES)
 
-mrproper: clean
-	rm -f $(OUTPUTDIR)/*.pdf
+mrproper:
+	latexmk -C $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES)\
+	$(SRC_GM_RESSOURCES)
 
-.PHONY: clean mrproper
+.PHONY: all clean mrproper
