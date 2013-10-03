@@ -14,11 +14,11 @@ player_ressources: $(SRC_PLAYER_RESSOURCES:%.tex=%.pdf)
 	latexmk -pdf $^
 
 clean:
-	latexmk -c $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES)\
+	latexmk -c $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES) \
 	$(SRC_GM_RESSOURCES)
 
 mrproper:
-	latexmk -C $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES)\
+	latexmk -C $(SRC_CHARACTER_SHEETS) $(SRC_PLAYER_RESSOURCES) \
 	$(SRC_GM_RESSOURCES)
 
 .PHONY: all clean mrproper
