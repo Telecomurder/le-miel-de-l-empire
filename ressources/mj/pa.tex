@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{minibox}
+\usepackage{calc}
+
+\usepackage{tikz}
+\usetikzlibrary{3d,calc,backgrounds}
+
+\usepackage[top=1cm,bottom=1cm,left=2cm,right=2cm]{geometry}
+
+\pagestyle{empty}
+\newlength{\pasize}
+
+\newcommand{\drawpa}[1] {
+    \setlength{\pasize}{#1 }
+    \framebox{
+        \minibox{
+            \textbf{1~PA}\\
+            \begin{tikzpicture}[smooth,blue]
+                \foreach \sign in {1, -1} {
+                    \foreach \t in {0.0,0.25,0.5,0.75,1.0} {
+                        \draw (-\pasize,\pasize) arc
+                        (90:0:\pasize*\real{\sign}*\real{\t} and \pasize);
+                        \draw (-2\pasize,0) arc
+                        (180:0:\pasize*\real{1} and \pasize*\real{\t});
+                    }
+                }
+            \end{tikzpicture}
+            \newline
+            \\
+            \hfill \textit{L'Empire, pour servir l'Homme}
+        }
+    }
+}
+
+\begin{document}
+    \drawpa{0.25\textwidth}\hfill\drawpa{0.25\textwidth}\\
+    \vfill
+    \drawpa{0.25\textwidth}\hfill\drawpa{0.25\textwidth}\\
+    \vfill
+    \drawpa{0.25\textwidth}\hfill\drawpa{0.25\textwidth}\\
+    \vfill
+    \drawpa{0.25\textwidth}\hfill\drawpa{0.25\textwidth}\\
+    \vfill
+\end{document}
+
