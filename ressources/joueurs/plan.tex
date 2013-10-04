@@ -5,6 +5,7 @@
 
 \usepackage{array}
 \usepackage{tabulary}
+\usepackage{multirow}
 \usepackage[top=0.5cm,bottom=0.5cm,left=0.5cm,right=0.5cm]{geometry}
 \usepackage{times}
 \usepackage[usenames,dvipsnames]{color}
@@ -23,9 +24,12 @@
 
     \begin{tabulary}{\linewidth}{|C|C|C|C|C|C|C|}
         \hline
-        \multicolumn{2}{|c|}{Salle de réunion} & Chambre impériale d'Hélios~III
+        \multicolumn{2}{|c|}{\multirow{2}{*}{Salle de réunion}}
+        & Chambre impériale d'Hélios~III
         & Chambre du prince Andrev & Chambre de Dame Perduinn
         & Chambre de Maître Korrig & Chambre de Deleb Karnar \\
+        \hline
+        \multicolumn{7}{|c|}{} \\
         \hline
         Salle des droïdes & Salle informatique & Chambre de Noreth Cal Noreth
         & Chambre d'Argann Terr & Chambre du Duc Igane de Rodrigo
