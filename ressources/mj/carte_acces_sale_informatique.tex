@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{varwidth}
+\renewcommand\ULthickness{4pt}
+\setlength \ULdepth{6pt}
+
+\begin{document}
+\thispagestyle{empty}
+\pgfmathsetmacro{\cardheight}{5}
+\pgfmathsetmacro{\cardwidth}{8}
+\pgfmathsetmacro{\stripwidth}{1.25}
+\pgfmathsetmacro{\strippadding}{0.5}
+\pgfmathsetmacro{\textpadding}{0.1}
+\pgfmathsetmacro{\ruleheight}{0.15}
+
+\begin{tikzpicture}
+    \node [font=\Large\ttfamily, align=center, minimum height=\cardheight cm,
+    minimum width=\cardwidth cm]
+    (origin) at (0.5*\cardwidth,\cardheight - 1) {CARTE D'ACCÈS À
+LA\\SALLE INFORMATIQUE};
+
+    \node [minimum height=\cardheight cm, minimum width=\cardwidth cm]
+    (origin) at (0.5*\cardwidth,0.5*\cardheight) {};
+
+    \fill[black] (0,\strippadding)
+    rectangle (\cardwidth,\stripwidth)
+    node{};
+
+    \node [anchor=south east] at (origin.south east)
+    {{\scriptsize \texttt{AA-1834-88/RAY-53300}}
+    };
+
+    \draw[rounded corners=0.2cm] (0,0) rectangle (\cardwidth,\cardheight);
+
+\end{tikzpicture}
+\end{document}
+
