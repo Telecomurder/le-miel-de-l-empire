@@ -16,25 +16,31 @@
 \pgfmathsetmacro{\textpadding}{0.1}
 \pgfmathsetmacro{\ruleheight}{0.15}
 
-\begin{tikzpicture}
-    \node [font=\Large\ttfamily, align=center, minimum height=\cardheight cm,
-    minimum width=\cardwidth cm]
-    (origin) at (0.5*\cardwidth,\cardheight - 1) {CARTE D'ACCÈS À
-LA\\SALLE INFORMATIQUE};
+\newcommand{\accesscard}{
+    \begin{tikzpicture}
+        \node [font=\Large\ttfamily, align=center, minimum height=\cardheight cm,
+        minimum width=\cardwidth cm]
+        (origin) at (0.5*\cardwidth,\cardheight - 1) {CARTE D'ACCÈS À
+        LA\\SALLE INFORMATIQUE};
 
-    \node [minimum height=\cardheight cm, minimum width=\cardwidth cm]
-    (origin) at (0.5*\cardwidth,0.5*\cardheight) {};
+        \node [minimum height=\cardheight cm, minimum width=\cardwidth cm]
+        (origin) at (0.5*\cardwidth,0.5*\cardheight) {};
 
-    \fill[black] (0,\strippadding)
-    rectangle (\cardwidth,\stripwidth)
-    node{};
+        \fill[black] (0,\strippadding)
+        rectangle (\cardwidth,\stripwidth)
+        node{};
 
-    \node [anchor=south east] at (origin.south east)
-    {{\scriptsize \texttt{AA-1834-88/RAY-53300}}
-    };
+        \node [anchor=south east] at (origin.south east)
+        {{\scriptsize \texttt{AA-1834-88/RAY-53300}}
+        };
 
-    \draw[rounded corners=0.2cm] (0,0) rectangle (\cardwidth,\cardheight);
+        \draw[rounded corners=0.2cm] (0,0) rectangle (\cardwidth,\cardheight);
 
-\end{tikzpicture}
+    \end{tikzpicture}
+}
+
+\accesscard \accesscard\\
+\accesscard
+
 \end{document}
 
