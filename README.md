@@ -1,4 +1,4 @@
-Le Miel de l'Empire
+Le Miel de l’Empire
 ===================
 
 Refonte de la murder de Michel Le Roy et José Lanchas en octobre 1997.
@@ -17,17 +17,17 @@ Synopsis
 
 Notre galaxie, dans un futur lointain... L’Empire humain règne sur des
 milliers de planètes. La plus importante d’entre elles est sans aucun doute
-Malte, petite planète mineure mais la seule où l'on peut récolter le
+Malte, petite planète mineure mais la seule où l’on peut récolter le
 « Miel », produit miraculeux qui permet de prolonger la vie et d’accomplir des
 prodiges. Comme le veut la tradition, le contrôle de Malte est confié à l’un
 des Duchés les plus influents de l’Empire et ce contrôle doit changer de mains
 tous les 50 ans. Nous sommes justement au moment du traditionnel choix du
 nouveau Duc de Malte par l’Empereur actuel, Hélios III. Les personnalités les
 plus importantes de l’Empire se sont réunis sur un petit satellite artificiel
-de Malte, l'astroport Carbon B. Au moment crucial de la réunion qui va décider
+de Malte, l’astroport Carbon B. Au moment crucial de la réunion qui va décider
 du nouveau maitre de Malte, Hélios III est assassiné. Tous les participants
 étant enfermés dans un quartier « Sécurité Totale », le coupable ne peut que
-l’un d'entre eux. Mais qui ?
+l’un d’entre eux. Mais qui ?
 
 
 Changements dans la refonte
